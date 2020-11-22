@@ -1,10 +1,10 @@
 #include<stdio.h>
 #include<sys/socket.h>
 #include<arpa/inet.h> //inet_addr
-
+#include<string.h>
 int main(int argc, char *argv[])
 {
-	int socket_desc'
+	int socket_desc;
 	struct sockaddr_in server;
 	char *message;
 
