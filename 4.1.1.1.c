@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<sys/socket.h>
 #include<arpa/inet.h> //inet_addr
-
+#include<string.h>
 int main(int argc, char *argv[])
 {
 	int socket_desc;
@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	}
 	
 	server.sin_addr.s_addr = inet_addr("192.168.0.162"); //server ip
-	server.sin_family = AF_NET;
+	server.sin_family = AF_INET;
 	server.sin_port = htons(22);
 
 	//connect to remote server
