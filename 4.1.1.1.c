@@ -7,6 +7,7 @@ int main(int argc, char *argv[])
 	int socket_desc;
 	struct sockaddr_in server;
 	char *message;
+	char server_reply[2000];
 
 	//create socket
 	socket_desc = socket(AF_INET, SOCK_STREAM, 0);
