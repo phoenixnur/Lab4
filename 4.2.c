@@ -38,3 +38,6 @@ int main(int argc, char *argv[])
 	{
 		perror("accept failed");
 	}
+	puts("done accept");
+	return 0;
+}
