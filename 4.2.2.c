@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 	//accept incoming connection
 	puts("waiting for incoming connection");
 	c=sizeof(struct sockaddr_in);
-	while{(new_socket = accept(socket_desc, (struct sockaddr *)&client, (socklen_t*)&c)))
+	while((new_socket = accept(socket_desc, (struct sockaddr *)&client, (socklen_t*)&c)))
 	{
 		if(recv(new_socket, messages, 2000, 0) <0)
 		{
