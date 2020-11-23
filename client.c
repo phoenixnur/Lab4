@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 
         puts("connected");
         //send some data
-        messages ="connect";
+        puts(messages); // ="connect";
         if(send(socket_desc, messages, strlen(messages), 0)<0)
         {
                 puts("send failed");
