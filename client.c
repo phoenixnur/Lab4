@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
 {
         int socket_desc;
         struct sockaddr_in server;
-        char *message;
+        char messages[2000];
         char server_reply[2000];
 
 
@@ -32,8 +32,8 @@ int main(int argc, char *argv[])
 
         puts("connected");
         //send some data
-        message ="connect";
-        if(send(socket_desc, message, strlen(message), 0)<0)
+        messages ="connect";
+        if(send(socket_desc, messages, strlen(messages), 0)<0)
         {
                 puts("send failed");
                 return 1;
