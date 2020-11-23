@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
                 puts("receive failed");
                 return 1;
         }
-        puts("receive");
-	puts(server_reply);
+        puts(server_reply);
+	puts("receive");
         return 0;
 }
