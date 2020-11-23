@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
 {
 	int socket_desc, new_socket, c;
 	struct sockaddr_in server, client;
-	char *message;
+	char messages[2000];
 
 	//create socket
 	socket_desc = socket(AF_INET, SOCK_STREAM, 0);
@@ -36,9 +36,9 @@ int main(int argc, char *argv[])
 	//accept incoming connection
 	puts("waiting for incoming connection");
 	c=sizeof(struct sockaddr_in);
-	while(new_socket = accept(socket_desc, (struct sockaddr *)&client, (socklen_t*)&c)))
+	while{(new_socket = accept(socket_desc, (struct sockaddr *)&client, (socklen_t*)&c)))
 	{
-		if(recv(new_socket, messages, 2000, 0) <0
+		if(recv(new_socket, messages, 2000, 0) <0)
 		{
 			puts("receives failed");
 			return 1;
